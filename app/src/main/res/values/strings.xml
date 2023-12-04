@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Share啊</string>
+    <string name="fb_app_id">254260200980637</string>
+    <string name="fb_client_token" translatable="false">77089e808de16455e427e3893cc8e644</string>
+    <string name="fb_authority" translatable="false">com.facebook.app.FacebookContentProvider254260200980637</string>
+
+    <string name="share_title">分享</string>
+    <string name="ins_no_install">请先安装Instagram</string>
+    <string name="whatsapp_no_install">请先安装WhatsApp</string>
+    <string name="copy_url_success">复制链接成功</string>
+    <string name="share_facebook">FaceBook</string>
+    <string name="share_ins">Instagram</string>
+    <string name="share_messenger">Messenger</string>
+    <string name="share_Whatsapp">WhatsApp</string>
+</resources>

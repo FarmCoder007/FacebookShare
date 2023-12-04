@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fragment_dialog_bg"
+    android:paddingLeft="24dp"
+    android:paddingTop="27dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="20dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/share_title"
+        android:textColor="@color/black_85"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/shape_share_bg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_copy_link_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="3dp"
+        android:maxLines="2"
+        android:textColor="@color/black_85"
+        android:textSize="12sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@+id/bg"
+        app:layout_constraintRight_toLeftOf="@+id/tv_copy_link"
+        app:layout_constraintTop_toTopOf="@+id/bg" />
+
+    <TextView
+        android:id="@+id/tv_copy_link"
+        android:layout_width="58dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/shape_copy_link"
+        android:gravity="center"
+        android:text="Copy"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintRight_toRightOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bg" />
+
+    <ImageView
+        android:id="@+id/iv_url_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/vector_share_copy_link"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_copy_link_tip"
+        app:layout_constraintTop_toBottomOf="@+id/tv_copy_link_tip" />
+
+    <TextView
+        android:id="@+id/tv_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        android:autoLink="web"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:text="https://qw6xxurweq.feishu.cn/docx/HNTPdWCK7oWWY4x9rezcDawvnxl"
+        android:textColor="@color/black_30"
+        android:textColorLink="@color/black_30"
+        android:textSize="12sp"
+        android:linksClickable="false"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_url_icon"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toRightOf="@+id/iv_url_icon"
+        app:layout_constraintRight_toLeftOf="@+id/tv_copy_link"
+        app:layout_constraintTop_toTopOf="@+id/iv_url_icon" />
+
+    <LinearLayout
+        android:id="@+id/ll_facebook"
+        style="@style/share_dialog_ll_style"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            style="@style/share_dialog_iv_style"
+            android:src="@mipmap/share_facebook" />
+
+        <TextView
+            style="@style/share_dialog_tv_style"
+            android:text="@string/share_facebook" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_Ins"
+        style="@style/share_dialog_ll_style"
+        app:layout_constraintEnd_toStartOf="@+id/ll_messenger"
+        app:layout_constraintStart_toEndOf="@+id/ll_facebook">
+
+        <ImageView
+            style="@style/share_dialog_iv_style"
+            android:src="@mipmap/share_ins" />
+
+        <TextView
+            style="@style/share_dialog_tv_style"
+            android:text="@string/share_ins" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_messenger"
+        style="@style/share_dialog_ll_style"
+        app:layout_constraintEnd_toStartOf="@+id/ll_whatsapp"
+        app:layout_constraintStart_toEndOf="@+id/ll_Ins">
+
+        <ImageView
+            style="@style/share_dialog_iv_style"
+            android:src="@mipmap/share_messenger" />
+
+        <TextView
+            style="@style/share_dialog_tv_style"
+            android:text="@string/share_messenger" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_whatsapp"
+        style="@style/share_dialog_ll_style"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            style="@style/share_dialog_iv_style"
+            android:src="@mipmap/share_whatsapp" />
+
+        <TextView
+            style="@style/share_dialog_tv_style"
+            android:text="@string/share_Whatsapp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
